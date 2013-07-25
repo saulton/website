@@ -1,0 +1,37 @@
+doctype 5
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    link(rel='shortcut icon', href='/images/favicon/favicon.ico')
+    link(rel='stylesheet', href='/stylesheets/base.css')
+    link(rel='stylesheet', href='/stylesheets/skeleton.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    script(type='text/javascript', src='javascripts/highlight.min.js')
+    link(rel='stylesheet', href='/stylesheets/monokai_sublime.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+
+    script(type='text/javascript') hljs.initHighlightingOnLoad();
+
+    .container.navbar.navbar-top
+      .ten.columns.offset-by-two
+        ul
+          li 
+            a(href='/') Gwen Bell
+          li 
+            a(href='/about') About
+          li 
+            a(href='/best') Best
+          li 
+            a(href='http://git.gwenbell.com') Git
+          li
+            a(href='mailto:gwen@gwenbell.com') Contact
+
+
+    .container
+      
+      .ten.columns
+        block content 
+      .five.columns.sidebar.offset-by-one
+        include sidebar.jade 
